@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:text="Just Ask Us Don't be Shy:3"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:id="@+id/Layout"
+        android:layout_width="409dp"
+        android:layout_height="665dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="50dp"
+        android:paddingTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greeting">
+
+        <Button
+            android:id="@+id/WhatsappBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="WhatsApp"
+            android:backgroundTint="@color/white"
+            android:textColor="#327da8"
+            android:textSize="24dp"/>
+
+        <Button
+            android:id="@+id/GmailBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Gmail"
+            android:backgroundTint="@color/white"
+            android:textColor="#327da8"
+            android:textSize="24dp"/>
+
+        <Button
+            android:id="@+id/TeleponBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Call"
+            android:backgroundTint="@color/white"
+            android:textColor="#327da8"
+            android:textSize="24dp"/>
+
+        <Button
+            android:id="@+id/smsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="SMS"
+            android:backgroundTint="@color/white"
+            android:textColor="#327da8"
+            android:textSize="24dp"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradient"
-    tools:context=".MainActivityAldo">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/logo"
@@ -41,6 +41,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
         <EditText
+            android:id="@+id/loginInput"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/bt_input_guruji"
@@ -48,8 +49,9 @@
             android:paddingLeft="30dp"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"/>
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/white"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -59,10 +61,12 @@
             android:paddingLeft="30dp"
             android:hint="Password"
             android:inputType="textPassword"
+            android:textCursorDrawable="@null"
             android:textColor="@color/white"
             android:textColorHint="@color/white"/>
 
         <Button
+            android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:backgroundTint="@color/white"

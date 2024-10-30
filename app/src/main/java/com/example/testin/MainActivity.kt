@@ -1,39 +1,42 @@
 package com.example.testin
 
-import android.app.Application
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
-class MainActivity : AppCompatActivity() {
-
+class MainActivity : BaseActivity() {
+    private lateinit var nameInput: EditText
     var btn : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
 
-        btn = findViewById(R.id.btnDisco)
+        setContentView(R.layout.gurunji_dashboarad)
+
+        btn = findViewById(R.id.loginButton)
+        nameInput = findViewById(R.id.loginInput)
 
         btn?.setOnClickListener {
-            finish()
+            val userName = nameInput.text.toString()
+            val intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("USER_NAME", userName)
+            startActivity(intent)
         }
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+
+        /* ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+             insets
+         }*/
     }
+
 
     override fun onDestroy() {
         super.onDestroy()
